@@ -16,12 +16,14 @@ class BagMain {
      */
     public static void enhanceBags(Bag[] bags, boolean double_enhance_handbags) {
         // TODO: Implement this.
-        for (Bag bag : bags) {
-            bag.enhance();
-        }
         if (double_enhance_handbags) {
-            if (bags.length > 0) {
-                bags[0].enhance();
+            for (Bag bag : bags) {
+                bag.enhance();
+                bag.enhance();
+            }
+        } else {
+            for (Bag bag : bags) {
+                bag.enhance();
             }
         }
     }
