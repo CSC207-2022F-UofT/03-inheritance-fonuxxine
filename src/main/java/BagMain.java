@@ -18,8 +18,12 @@ class BagMain {
         // TODO: Implement this.
         if (double_enhance_handbags) {
             for (Bag bag : bags) {
-                bag.enhance();
-                bag.enhance();
+                if (bag instanceof CrossbodyBag){
+                    bag.enhance();
+                } else {
+                    bag.enhance();
+                    bag.enhance();
+                }
             }
         } else {
             for (Bag bag : bags) {
